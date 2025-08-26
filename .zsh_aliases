@@ -1,0 +1,19 @@
+# --- My Custom Aliases ---
+alias dt="cd ~/Desktop/"
+
+# Rails
+alias be="bundle exec"
+alias bi="bundle install"
+alias rs="bundle exec rails server"
+
+# Git
+alias gs="git status"
+alias ga="git add"
+alias gc="git commit -m"
+alias gp="git push"
+alias gl="git log --online --graph --decorate"
+
+# System & Config
+alias zshconfig="vim ~/.zshrc"
+alias vimconfig="vim ~/.vimrc"
+alias reload="source ~/.zshrc"
