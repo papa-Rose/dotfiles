@@ -9,7 +9,7 @@ This repository contains the configuration files (`dotfiles`) for my personal de
 #### macOS
 Install Homebrew and Git:
 ```bash
-/bin/bash -c "$(curl -fsSL [https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh](https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh))"
+/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
 brew install git
 ```
 
@@ -22,7 +22,7 @@ sudo apt install build-essential curl file git -y
 
 ### 2. Clone the Repository
 ```bash
-git clone [https://github.com/papa-Rose/dotfiles.git](https://github.com/papa-Rose/dotfiles.git) ~/dotfiles
+git clone https://github.com/papa-Rose/dotfiles.git ~/dotfiles
 ```
 
 ### 3. Create Symbolic Links
@@ -36,15 +36,14 @@ ln -s ~/dotfiles/.zsh_aliases ~/.zsh_aliases
 
 #### Install nvm & Node.js
 ```bash
-curl -o- [https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh](https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh) | bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.zshrc
 nvm install --lts
 ```
 
 #### Install vim-plug
 ```bash
-curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
-    [https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim](https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim)
+curl -fLo ~/.vim/autoload/plug.vim --create-dirs https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 ```
 
 #### Final Steps
