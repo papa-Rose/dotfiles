@@ -10,6 +10,12 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
 
+" --- My Color Schemes ---
+Plug 'whatyouhide/vim-gotham'
+Plug 'cseelus/vim-colors-lucid'
+Plug 'nikolvs/vim-sunbather'
+Plug 'haishanh/night-owl.vim'
+
 call plug#end()
 
 " Sets the filetype for syntax highlighting and identation rules
