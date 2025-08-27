@@ -22,6 +22,9 @@ call plug#end()
 filetype plugin indent on
 syntax on
 
+" Colorscheme
+colorscheme night-owl
+
 " Show line numbers
 set number
 
@@ -90,7 +93,7 @@ let g:airline_powerline_fonts = 1
 " Enable a tabline at the top for managing buffers
 let g:airline#extensions#tabline#enabled = 1
 " Choose a theme for the status bar
-let g:airline_theme = 'solarized'
+let g:airline_theme = 'night_owl'
 
 
 " --- CoC (Autocompletion) Configuration ---
