@@ -9,6 +9,7 @@ Plug 'tpope/vim-rails'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
+Plug 'mattn/emmet-vim'
 
 " --- My Color Schemes ---
 Plug 'whatyouhide/vim-gotham'
