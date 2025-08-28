@@ -114,5 +114,5 @@ function! CheckBackspace() abort
 endfunction
 
 " --- Emmet Configuration ---
-" Set Tab as the expansion key for Emmet
-let g:user_emmet_leader_key='<Tab>'
+" Set Ctrl+e  as the expansion key for Emmet
+let g:user_emmet_leader_key='<C-e>'
