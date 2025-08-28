@@ -112,7 +112,3 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1] =~# '\s'
 endfunction
-
-" --- Emmet Configuration ---
-" Set Ctrl+e  as the expansion key for Emmet
-let g:user_emmet_leader_key='<C-e>'
