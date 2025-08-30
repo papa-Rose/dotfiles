@@ -8,7 +8,7 @@ Plug 'sheerun/vim-polyglot'
 Plug 'tpope/vim-rails'
 Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
-Plug 'neoclide/coc.nvim', {'branch': 'master', 'do': 'npm ci'}
+Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm ci'}
 Plug 'mattn/emmet-vim'
 
 " --- My Color Schemes ---
@@ -89,7 +89,7 @@ inoremap <Right> <Nop>
 nnoremap <leader>/ :nohlsearch<CR>
 
 
-" --- Comnands ---
+" --- Commands ---
 " Automatically remove trailing whitespace on save for specific filetypes
 autocmd BufWritePre *.rb,*.html,*.erb,*.js,*.css,*.yml :%s/\s\+$//e
 
@@ -106,6 +106,8 @@ command! NTT NERDTreeToggle
 let g:airline_powerline_fonts = 1
 " Enable a tabline at the top for managing buffers
 let g:airline#extensions#tabline#enabled = 1
+" Enable CoC extension
+let g:airline#extensions#coc#enabled = 1
 " Choose a theme for the status bar
 let g:airline_theme = 'night_owl'
 
