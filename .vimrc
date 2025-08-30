@@ -1,4 +1,4 @@
-" Vim-Plug Section
+" --- Vim-Plug Section ----
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
@@ -19,6 +19,7 @@ Plug 'haishanh/night-owl.vim'
 
 call plug#end()
 
+" --- Editor Configurations ---
 " Sets the filetype for syntax highlighting and identation rules
 filetype plugin indent on
 syntax on
@@ -46,6 +47,10 @@ set incsearch
 set hlsearch
 set ignorecase
 set smartcase
+
+" Set a vertical line at the 80th column
+set colorcolumn=80
+
 
 " --- Ergonomics & Shortcuts ---
 " Set the Leader Key to comma
@@ -79,6 +84,14 @@ inoremap <Up> <Nop>
 inoremap <Down> <Nop>
 inoremap <Left> <Nop>
 inoremap <Right> <Nop>
+
+" Turn off search highlighting with ,/
+nnoremap <leader>/ :nohlsearch<CR>
+
+
+" --- Comnands ---
+" Automatically remove trailing whitespace on save for specific filetypes
+autocmd BufWritePre *.rb,*.html,*.erb,*.js,*.css,*.yml :%s/\s\+$//e
 
 
 " --- NERDTree Configuration ---
