@@ -113,8 +113,11 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
 [ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
 
-# -------------------------------------------------------
-# My Personal Customizations
-# -------------------------------------------------------
+# --- My Personal Customizations ---
+# Store aliases in zsh_aliases
 [ -f ~/.zsh_aliases ] && source ~/.zsh_aliases
-# -------------------------------------------------------
+
+# Source local, machine-specific configurations if file exists
+if [[ -f ~/.zshrc.local ]]; then
+  source ~/.zshrc.local
+fi

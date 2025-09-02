@@ -1,2 +1,5 @@
 # Ignore local .vimrc files
 .vimrc.local
+
+# Ignore local .zshrc files
+.zshrc.local
