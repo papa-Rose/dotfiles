@@ -127,3 +127,8 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1] =~# '\s'
 endfunction
+
+" --- Load local .vimrc on different machine ---
+if filereadable(expand('~/.vimrc.local'))
+  source ~/.vimrc.local
+end

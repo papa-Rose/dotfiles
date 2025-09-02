@@ -1,0 +1,2 @@
+# Ignore local .vimrc files
+.vimrc.local
