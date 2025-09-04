@@ -12,7 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm ci'}
 Plug 'mattn/emmet-vim'
 Plug 'andymass/vim-matchup'
-Plug 'lukas-reineke/indent-blankline.nvim'
+Plug 'Yggdroot/indentLine'
 
 " --- My Color Schemes ---
 Plug 'whatyouhide/vim-gotham'
@@ -23,8 +23,10 @@ Plug 'haishanh/night-owl.vim'
 call plug#end()
 
 " --- Editor Configurations ---
-" Enable true color support for themes and plugins
-set termguicolors
+" Conditionally enable true color support if the terminal supports it
+if has('termguicolors') && ($COLORTERM == 'truecolor' || $COLORTERM == '24bit')
+  set termguicolors
+endif
 
 " Sets the filetype for syntax highlighting and identation rules
 filetype plugin indent on
@@ -139,16 +141,12 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1] =~# '\s'
 endfunction
 
-" --- Indent Blankline Configuration ---
-" Use the vertical bar character for the indent line
-let g:indent_blankline_char = '|'
+" --- IndentLine Configuration ---
+" Set a dark grey color for true-color terminals
+let g:indentLine_color_gui = '#444444'
 
-" Show the line for the current scope
-let g:indent_blankline_show_current_context = 1
-let g:indent_blankline_show_current_context_start = 1
-
-" Enable character highlighting
-let g:indent_blankline_char_highlight_list = ['Comment', 'Identifier', 'String'] 
+" Set a dark grey color for 256-color terminals
+let g:indentLine_color_gui = 239
 
 " --- Load local .vimrc on different machine ---
 if filereadable(expand('~/.vimrc.local'))
