@@ -10,6 +10,7 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm ci'}
 Plug 'mattn/emmet-vim'
+Plug 'andymass/vim-matchup'
 
 " --- My Color Schemes ---
 Plug 'whatyouhide/vim-gotham'
@@ -51,6 +52,11 @@ set smartcase
 " Set a vertical line at the 80th column
 set colorcolumn=80
 
+" Highlight the current vertical column
+set cursorcolumn
+
+" Highlight the current horizontal line
+set cursorline
 
 " --- Ergonomics & Shortcuts ---
 " Set the Leader Key to comma
