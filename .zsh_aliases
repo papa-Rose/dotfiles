@@ -1,5 +1,7 @@
 # --- My Custom Aliases ---
 alias dt="cd ~/Desktop/"
+alias dl="cd ~/Downloads/"
+alias dotfiles="cd ~/dotfiles/"
 
 # Rails
 alias be="bundle exec"
