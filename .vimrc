@@ -23,6 +23,9 @@ Plug 'haishanh/night-owl.vim'
 call plug#end()
 
 " --- Editor Configurations ---
+" Enable true color support for themes and plugins
+set termguicolors
+
 " Sets the filetype for syntax highlighting and identation rules
 filetype plugin indent on
 syntax on
