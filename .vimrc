@@ -141,12 +141,17 @@ function! CheckBackspace() abort
   return !col || getline('.')[col - 1] =~# '\s'
 endfunction
 
-" --- IndentLine Configuration ---
-" Set a dark grey color for true-color terminals
-let g:indentLine_color_gui = '#444444'
 
-" Set a dark grey color for 256-color terminals
-let g:indentLine_color_gui = 239
+" --- IndentLine Configuration ---
+" Use condition logic for color settings
+if &termguicolors
+  " Use a hex color for true-color terminals (like iTerm2)
+  let g:indentLine_color_gui = '#444444'
+else
+  " Use a 256-palette color for other terminals
+  let g:indentLine_color_term = 239
+endif
+
 
 " --- Load local .vimrc on different machine ---
 if filereadable(expand('~/.vimrc.local'))
