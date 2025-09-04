@@ -2,6 +2,7 @@
 call plug#begin('~/.vim/plugged')
 
 Plug 'preservim/nerdtree'
+Plug 'junegunn/fzf', { 'do': { -> fzf#install() }}
 Plug 'junegunn/fzf.vim'
 Plug 'tpope/vim-fugitive'
 Plug 'sheerun/vim-polyglot'
@@ -11,6 +12,7 @@ Plug 'vim-airline/vim-airline-themes'
 Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm ci'}
 Plug 'mattn/emmet-vim'
 Plug 'andymass/vim-matchup'
+Plug 'lukas-reineke/indent-blankline.nvim'
 
 " --- My Color Schemes ---
 Plug 'whatyouhide/vim-gotham'
@@ -133,6 +135,17 @@ function! CheckBackspace() abort
   let col = col('.') - 1
   return !col || getline('.')[col - 1] =~# '\s'
 endfunction
+
+" --- Indent Blankline Configuration ---
+" Use the vertical bar character for the indent line
+let g:indent_blankline_char = '|'
+
+" Show the line for the current scope
+let g:indent_blankline_show_current_context = 1
+let g:indent_blankline_show_current_context_start = 1
+
+" Enable character highlighting
+let g:indent_blankline_char_highlight_list = ['Comment', 'Identifier', 'String'] 
 
 " --- Load local .vimrc on different machine ---
 if filereadable(expand('~/.vimrc.local'))
