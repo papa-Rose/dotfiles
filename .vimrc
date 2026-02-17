@@ -124,7 +124,7 @@ nnoremap <c-f> :Rg<Space>
 " Map , + b to search files that are currently open (Buffer)
 nnoremap <leader>b :Buffers<CR>
 " Ignore non-relevant files when searching
-let $FZF_DEFAULT_COMMAND = 'rg --files --ignore-case --hidden -g "!{.git,node_modules,log,tmp}/*"'
+let $FZF_DEFAULT_COMMAND = 'rg --files --ignore-case --hidden -g "!{.git,node_modules,log,tmp,vendor}/*"'
 
 
 " --- Airline Configuration ---
