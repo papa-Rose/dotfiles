@@ -114,13 +114,29 @@ nnoremap <leader>t :NERDTreeToggle<CR>
 command! NTT NERDTreeToggle
 
 
+" --- fzf Configuration ---
+" Map Ctrl + p to search files (similar to VS code)
+nnoremap <c-p> :Files<CR>
+" Map Ctrl + g to search only Git tracked files
+nnoremap <c-g> :GFiles<CR>
+" Map Ctrl + f to find specific text across entire project
+nnoremap <c-f> :Rg<Space>
+" Map , + b to search files that are currently open (Buffer)
+nnoremap <leader>b :Buffers<CR>
+" Ignore non-relevant files when searching
+let $FZF_DEFAULT_COMMAND = 'rg --files --ignore-case --hidden -g "!{.git,node_modules,log,tmp}/*"'
+
+
 " --- Airline Configuration ---
 " Enable powerline fonts for fancy symbols
 let g:airline_powerline_fonts = 1
+
 " Enable a tabline at the top for managing buffers
 let g:airline#extensions#tabline#enabled = 1
+
 " Enable CoC extension
 let g:airline#extensions#coc#enabled = 1
+
 " Choose a theme for the status bar
 let g:airline_theme = 'night_owl'
 
