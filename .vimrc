@@ -141,6 +141,29 @@ let g:airline#extensions#coc#enabled = 1
 let g:airline_theme = 'night_owl'
 
 
+" --- Emmet Configuration ---
+" Enable Emmet in all modes
+let g:user_emmet_mode = 'a'
+
+" Remap the trigger key to ,, (Double comma)
+" In insert mode, type 'p' then ',,' to expand to <p></p>
+let g:user_emmet_leader_key = ','
+
+" Tell Emmet to treat .erb files as .html files
+let g:user_emmet_settings = {
+\ 'erb': {
+\   'extends': 'html',
+\ },
+\}
+
+" Map (ctrl+e)= and (ctrl+e)- to insert erb tags (only in erb files)
+autocmd FileType eruby inoremap <buffer> <c-e>= <%= %><Left><Left><Left>
+autocmd FileType eruby inoremap <buffer> <c-e>- <% %><Left><Left><Left>
+
+" Highlight text and press ,e to wrap in <%= %>
+vnoremap <leader>e c<%= <c-r>" %><esc>
+
+
 " --- CoC (Autocompletion) Configuration ---
 " Use Enter to confirm completion
 inoremap <expr> <cr> coc#pum#visible() ? coc#pum#confirm() : "\<CR>"
