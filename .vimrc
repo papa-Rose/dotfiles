@@ -82,6 +82,9 @@ nnoremap O O<esc>
 " Yank entire line
 nnoremap Y y$
 
+" Yank word
+nnoremap <leader>y yiw
+
 " Faster window navigation
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
