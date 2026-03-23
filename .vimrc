@@ -13,6 +13,7 @@ Plug 'neoclide/coc.nvim', {'branch': 'release', 'do': 'npm ci'}
 Plug 'mattn/emmet-vim'
 Plug 'andymass/vim-matchup'
 Plug 'Yggdroot/indentLine'
+Plug 'vimwiki/vimwiki'
 
 " --- My Color Schemes ---
 Plug 'whatyouhide/vim-gotham'
@@ -193,6 +194,14 @@ else
   " Use a 256-palette color for other terminals
   let g:indentLine_color_term = 239
 endif
+
+
+" --- Vimwiki Configurations ---
+" Tell Vimwiki to use Markdown syntax and where to save the files
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+
+" Prevent Vimwiki from taking over ALL .md files in my system
+let g:vimwiki_global_ext = 0
 
 
 " --- Load local .vimrc on different machine ---
