@@ -2,6 +2,7 @@
 alias dt="cd ~/Desktop/"
 alias dl="cd ~/Downloads/"
 alias dotfiles="cd ~/dotfiles/"
+alias p="cd ~/projects/"
 
 # Rails
 alias be="bundle exec"
