@@ -105,6 +105,9 @@ inoremap <Right> <Nop>
 " Turn off search highlighting with ,/
 nnoremap <leader>/ :nohlsearch<CR>
 
+" Highlight Smart Quotes
+match ErrorMsg /[“”‘’]/
+
 
 " --- Commands ---
 " Automatically remove trailing whitespace on save for specific filetypes
