@@ -1,0 +1,20 @@
+# Custom Prompt
+
+# --- COLOR CONFIGURATION ---
+# Change these 3-digit codes to update prompt colors
+DIR_COLOR="032"
+BRANCH_COLOR="011"
+# ---------------------------
+
+autoload -Uz vcs_info
+zstyle ':vcs_info:*' enable git
+
+zstyle ':vcs_info:git:*' formats "%F{$BRANCH_COLOR}(%b)%f"
+
+precmd() {
+  vcs_info
+  print -Pn "\e]0;%~\a"
+}
+
+PROMPT='%F{'${DIR_COLOR}'}%1~%f ${vcs_info_msg_0_} '
+
