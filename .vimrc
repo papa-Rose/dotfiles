@@ -68,6 +68,17 @@ set cursorcolumn
 " Highlight the current horizontal line
 set cursorline
 
+" Undo even after closing and reopening file
+set undofile
+set undodir=~/.vim/undodir
+
+" Improve responsivesness for CoC diagnostics and git gutter signs
+set updatetime=300
+
+" Disable swap files
+set noswapfile
+
+
 " --- Ergonomics & Shortcuts ---
 " Set the Leader Key to comma
 let mapleader=","
@@ -79,8 +90,8 @@ inoremap jj <Esc>
 nnoremap <space> :
 
 " Exit Insert mode after creating  a new line (o, O) below or above
-nnoremap o o<esc>
-nnoremap O O<esc>
+nnoremap <leader>o o<esc>
+nnoremap <leader>O O<esc>
 
 " Yank entire line
 nnoremap Y y$
